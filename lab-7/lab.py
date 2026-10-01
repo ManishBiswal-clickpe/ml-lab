@@ -1,30 +1,27 @@
-
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
-np.random.seed(42)
-Path('figures').mkdir(exist_ok=True)
 
+np.random.seed(42)
+Path("figures").mkdir(exist_ok=True)
 
 
 import builtins
-_inputs = iter(['0','50','1','2','3','3','4','5','6','7','8'])
-def recorded_input(prompt=''):
+
+_inputs = iter(["0", "50", "1", "2", "3", "3", "4", "5", "6", "7", "8"])
+
+
+def recorded_input(prompt=""):
     value = next(_inputs)
     print(prompt + value)
     return value
+
+
 input = recorded_input
-
-
-
 
 
 import numpy as np
 from sklearn.datasets import load_iris
-
-
-
-
 
 
 def euclidean_distance(p, q):
@@ -84,19 +81,11 @@ def cosine_distance(p, q):
     return 1 - cosine_similarity
 
 
-
-
-
-
 iris = load_iris()
 
 X = iris.data
 
 feature_names = iris.feature_names
-
-
-
-
 
 
 print("=" * 70)
@@ -112,10 +101,6 @@ for i, name in enumerate(feature_names):
     print(f"{i + 1}. {name}")
 
 
-
-
-
-
 print("\n" + "=" * 70)
 print("FIRST 10 SAMPLE POINTS")
 print("=" * 70)
@@ -123,17 +108,7 @@ print("=" * 70)
 print("\nSample\tSepal Length\tSepal Width\tPetal Length\tPetal Width")
 
 for i in range(10):
-    print(
-        f"{i}\t"
-        f"{X[i][0]:.2f}\t\t"
-        f"{X[i][1]:.2f}\t\t"
-        f"{X[i][2]:.2f}\t\t"
-        f"{X[i][3]:.2f}"
-    )
-
-
-
-
+    print(f"{i}\t{X[i][0]:.2f}\t\t{X[i][1]:.2f}\t\t{X[i][2]:.2f}\t\t{X[i][3]:.2f}")
 
 
 print("\n" + "=" * 70)
@@ -142,7 +117,6 @@ print("=" * 70)
 
 point1_index = int(input("\nEnter index of first point (0-149): "))
 point2_index = int(input("Enter index of second point (0-149): "))
-
 
 
 if point1_index < 0 or point1_index >= len(X):
@@ -158,10 +132,6 @@ P = X[point1_index]
 Q = X[point2_index]
 
 
-
-
-
-
 print("\nPoint P:")
 print(P)
 
@@ -172,12 +142,7 @@ print("\nDifference P - Q:")
 print(P - Q)
 
 
-
-
-
-
 while True:
-
     print("\n" + "=" * 70)
     print("DISTANCE MEASURES")
     print("=" * 70)
@@ -193,35 +158,17 @@ while True:
 
     choice = int(input("\nEnter your choice: "))
 
-
-
-
-
-
     if choice == 1:
-
         d = euclidean_distance(P, Q)
 
         print("\nEuclidean Distance =", d)
 
-
-
-
-
-
     elif choice == 2:
-
         d = manhattan_distance(P, Q)
 
         print("\nManhattan Distance =", d)
 
-
-
-
-
-
     elif choice == 3:
-
         r = float(input("\nEnter Minkowski parameter r: "))
 
         if r <= 0:
@@ -232,102 +179,73 @@ while True:
 
             print("\nMinkowski Distance =", d)
 
-
-
-
-
-
     elif choice == 4:
-
         d = chebyshev_distance(P, Q)
 
         print("\nChebyshev Distance =", d)
 
-
-
-
-
-
     elif choice == 5:
-
         d = squared_euclidean_distance(P, Q)
 
         print("\nSquared Euclidean Distance =", d)
 
-
-
-
-
-
     elif choice == 6:
-
         d = cosine_distance(P, Q)
 
         print("\nCosine Distance =", d)
 
-
-
-
-
-
     elif choice == 7:
-
         print("\n" + "=" * 70)
         print("DISTANCE RESULTS")
         print("=" * 70)
 
-        print(
-            "Euclidean Distance        :",
-            euclidean_distance(P, Q)
-        )
+        print("Euclidean Distance        :", euclidean_distance(P, Q))
 
-        print(
-            "Manhattan Distance        :",
-            manhattan_distance(P, Q)
-        )
+        print("Manhattan Distance        :", manhattan_distance(P, Q))
 
-        print(
-            "Chebyshev Distance        :",
-            chebyshev_distance(P, Q)
-        )
+        print("Chebyshev Distance        :", chebyshev_distance(P, Q))
 
-        print(
-            "Squared Euclidean Distance:",
-            squared_euclidean_distance(P, Q)
-        )
+        print("Squared Euclidean Distance:", squared_euclidean_distance(P, Q))
 
-        print(
-            "Cosine Distance            :",
-            cosine_distance(P, Q)
-        )
+        print("Cosine Distance            :", cosine_distance(P, Q))
 
         r = 3
 
-        print(
-            f"Minkowski Distance (r={r}):",
-            minkowski_distance(P, Q, r)
-        )
-
-
-
-
-
+        print(f"Minkowski Distance (r={r}):", minkowski_distance(P, Q, r))
 
     elif choice == 8:
-
         print("\nProgram terminated.")
         break
 
-
     else:
-
         print("\nInvalid choice. Please select 1-8.")
 
-names=['Euclidean','Manhattan','Minkowski r=3','Chebyshev','Squared Euclidean','Cosine']
-values=[euclidean_distance(P,Q),manhattan_distance(P,Q),minkowski_distance(P,Q,3),chebyshev_distance(P,Q),squared_euclidean_distance(P,Q),cosine_distance(P,Q)]
+names = [
+    "Euclidean",
+    "Manhattan",
+    "Minkowski r=3",
+    "Chebyshev",
+    "Squared Euclidean",
+    "Cosine",
+]
+values = [
+    euclidean_distance(P, Q),
+    manhattan_distance(P, Q),
+    minkowski_distance(P, Q, 3),
+    chebyshev_distance(P, Q),
+    squared_euclidean_distance(P, Q),
+    cosine_distance(P, Q),
+]
 import pandas as pd
-print(pd.DataFrame({'Metric':names,'Distance':values}).to_string(index=False))
-plt.figure(figsize=(9,4));plt.bar(names,values);plt.xticks(rotation=20,ha='right');plt.ylabel('Distance (metric-specific units)');plt.title('Iris points 0 and 50');plt.tight_layout();plt.show()
+
+print(pd.DataFrame({"Metric": names, "Distance": values}).to_string(index=False))
+plt.figure(figsize=(9, 4))
+plt.bar(names, values)
+plt.xticks(rotation=20, ha="right")
+plt.ylabel("Distance (metric-specific units)")
+plt.title("Iris points 0 and 50")
+plt.tight_layout()
+plt.show()
 
 # --- Output ---
 # ======================================================================

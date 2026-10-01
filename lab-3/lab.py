@@ -1,9 +1,9 @@
-
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
+
 np.random.seed(42)
-Path('figures').mkdir(exist_ok=True)
+Path("figures").mkdir(exist_ok=True)
 
 
 import pandas as pd
@@ -13,10 +13,11 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split
 
 
-
-
-
-df = pd.read_csv("IRIS.csv", header=None, names=["SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm", "Species"])
+df = pd.read_csv(
+    "IRIS.csv",
+    header=None,
+    names=["SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm", "Species"],
+)
 
 print("First 5 observations:")
 print(df.head())
@@ -28,27 +29,15 @@ print("\nColumns:")
 print(df.columns)
 
 
-
-
-
-
 print("\n--- Particular Column ---")
 
 
 print(df["SepalLengthCm"].head())
 
 
-
-
-
-
 print("\n--- Summary Statistics ---")
 
 print(df.describe())
-
-
-
-
 
 
 print("\n--- Mean ---")
@@ -64,21 +53,13 @@ std_values = df[numeric_columns].std()
 print(std_values)
 
 
-
-
-
-
-
 print("\n--- Duplicate Values ---")
 
-print("Duplicates before removal:",
-      df.duplicated().sum())
+print("Duplicates before removal:", df.duplicated().sum())
 
 df = df.drop_duplicates().copy()
 
-print("Duplicates after removal:",
-      df.duplicated().sum())
-
+print("Duplicates after removal:", df.duplicated().sum())
 
 
 print("\n--- Missing Values ---")
@@ -86,19 +67,15 @@ print("\n--- Missing Values ---")
 print(df.isnull().sum())
 
 
-
 for col in numeric_columns:
     df[col] = df[col].fillna(df[col].mean())
 
 
 if "Species" in df.columns:
-    df["Species"] = df["Species"].fillna(
-        df["Species"].mode()[0]
-    )
+    df["Species"] = df["Species"].fillna(df["Species"].mode()[0])
 
 print("\nMissing values after preprocessing:")
 print(df.isnull().sum())
-
 
 
 print("\n--- Standardization ---")
@@ -109,13 +86,9 @@ standard_scaler = StandardScaler()
 
 X_standardized = standard_scaler.fit_transform(X)
 
-X_standardized = pd.DataFrame(
-    X_standardized,
-    columns=numeric_columns
-)
+X_standardized = pd.DataFrame(X_standardized, columns=numeric_columns)
 
 print(X_standardized.head())
-
 
 
 print("\n--- Normalization ---")
@@ -124,28 +97,23 @@ min_max_scaler = MinMaxScaler()
 
 X_normalized = min_max_scaler.fit_transform(X)
 
-X_normalized = pd.DataFrame(
-    X_normalized,
-    columns=numeric_columns
-)
+X_normalized = pd.DataFrame(X_normalized, columns=numeric_columns)
 
 print(X_normalized.head())
 
 
-
 print("\n--- Data Balancing ---")
 
-min_count = df['Species'].value_counts().min()
-df = pd.concat([group.sample(n=min_count, random_state=42) for _,group in df.groupby('Species')], ignore_index=True)
-print('Balanced class counts:')
-print(df['Species'].value_counts())
+min_count = df["Species"].value_counts().min()
+df = pd.concat(
+    [group.sample(n=min_count, random_state=42) for _, group in df.groupby("Species")],
+    ignore_index=True,
+)
+print("Balanced class counts:")
+print(df["Species"].value_counts())
 
 print("\nClass proportions:")
 print(df["Species"].value_counts(normalize=True))
-
-
-
-
 
 
 print("\n--- Train Test Split ---")
@@ -154,11 +122,7 @@ X = df[numeric_columns]
 Y = df["Species"]
 
 X_train, X_test, Y_train, Y_test = train_test_split(
-    X,
-    Y,
-    test_size=0.20,
-    random_state=42,
-    stratify=Y
+    X, Y, test_size=0.20, random_state=42, stratify=Y
 )
 
 print("X_train:")
@@ -180,8 +144,16 @@ print("Y_train:", Y_train.shape)
 print("Y_test :", Y_test.shape)
 
 
-df['Species'].value_counts().sort_index().plot.bar(title='Class counts after duplicate removal');plt.xlabel('Species');plt.ylabel('Count');plt.tight_layout();plt.show()
-print('Class balancing check: counts shown above; equal-count random undersampling is applied.')
+df["Species"].value_counts().sort_index().plot.bar(
+    title="Class counts after duplicate removal"
+)
+plt.xlabel("Species")
+plt.ylabel("Count")
+plt.tight_layout()
+plt.show()
+print(
+    "Class balancing check: counts shown above; equal-count random undersampling is applied."
+)
 
 # --- Output ---
 # First 5 observations:
