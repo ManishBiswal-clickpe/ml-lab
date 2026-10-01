@@ -10,7 +10,7 @@ Use Python 3.10 or newer. Install `requirements.txt`, then run `python lab.py` f
 
 ## Results
 
-All seven Python programs ran successfully. PNGs are in `figures/` and `script-figures/`; printed results are in the output text files. `script-execution-report.json` records successful script runs.
+All seven Python programs ran successfully. PNGs are in each lab's `figures/` folder; printed output is in comments at the bottom of each script.
 
 ## Data and implementation notes
 

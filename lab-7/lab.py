@@ -328,3 +328,195 @@ values=[euclidean_distance(P,Q),manhattan_distance(P,Q),minkowski_distance(P,Q,3
 import pandas as pd
 print(pd.DataFrame({'Metric':names,'Distance':values}).to_string(index=False))
 plt.figure(figsize=(9,4));plt.bar(names,values);plt.xticks(rotation=20,ha='right');plt.ylabel('Distance (metric-specific units)');plt.title('Iris points 0 and 50');plt.tight_layout();plt.show()
+
+# --- Output ---
+# ======================================================================
+#        DISTANCE MEASURES IN N-DIMENSIONAL FEATURE SPACE
+# ======================================================================
+#
+# Dataset: Iris Dataset
+# Number of samples : 150
+# Number of features: 4
+#
+# Features:
+# 1. sepal length (cm)
+# 2. sepal width (cm)
+# 3. petal length (cm)
+# 4. petal width (cm)
+#
+# ======================================================================
+# FIRST 10 SAMPLE POINTS
+# ======================================================================
+#
+# Sample	Sepal Length	Sepal Width	Petal Length	Petal Width
+# 0	5.10		3.50		1.40		0.20
+# 1	4.90		3.00		1.40		0.20
+# 2	4.70		3.20		1.30		0.20
+# 3	4.60		3.10		1.50		0.20
+# 4	5.00		3.60		1.40		0.20
+# 5	5.40		3.90		1.70		0.40
+# 6	4.60		3.40		1.40		0.30
+# 7	5.00		3.40		1.50		0.20
+# 8	4.40		2.90		1.40		0.20
+# 9	4.90		3.10		1.50		0.10
+#
+# ======================================================================
+# SELECT TWO SAMPLE POINTS
+# ======================================================================
+#
+# Enter index of first point (0-149): 0
+# Enter index of second point (0-149): 50
+#
+# Point P:
+# [5.1 3.5 1.4 0.2]
+#
+# Point Q:
+# [7.  3.2 4.7 1.4]
+#
+# Difference P - Q:
+# [-1.9  0.3 -3.3 -1.2]
+#
+# ======================================================================
+# DISTANCE MEASURES
+# ======================================================================
+# 1. Euclidean Distance
+# 2. Manhattan Distance
+# 3. Minkowski Distance
+# 4. Chebyshev Distance
+# 5. Squared Euclidean Distance
+# 6. Cosine Distance
+# 7. Calculate ALL distances
+# 8. Exit
+#
+# Enter your choice: 1
+#
+# Euclidean Distance = 4.003748243833521
+#
+# ======================================================================
+# DISTANCE MEASURES
+# ======================================================================
+# 1. Euclidean Distance
+# 2. Manhattan Distance
+# 3. Minkowski Distance
+# 4. Chebyshev Distance
+# 5. Squared Euclidean Distance
+# 6. Cosine Distance
+# 7. Calculate ALL distances
+# 8. Exit
+#
+# Enter your choice: 2
+#
+# Manhattan Distance = 6.7
+#
+# ======================================================================
+# DISTANCE MEASURES
+# ======================================================================
+# 1. Euclidean Distance
+# 2. Manhattan Distance
+# 3. Minkowski Distance
+# 4. Chebyshev Distance
+# 5. Squared Euclidean Distance
+# 6. Cosine Distance
+# 7. Calculate ALL distances
+# 8. Exit
+#
+# Enter your choice: 3
+#
+# Enter Minkowski parameter r: 3
+#
+# Minkowski Distance = 3.5450237756877807
+#
+# ======================================================================
+# DISTANCE MEASURES
+# ======================================================================
+# 1. Euclidean Distance
+# 2. Manhattan Distance
+# 3. Minkowski Distance
+# 4. Chebyshev Distance
+# 5. Squared Euclidean Distance
+# 6. Cosine Distance
+# 7. Calculate ALL distances
+# 8. Exit
+#
+# Enter your choice: 4
+#
+# Chebyshev Distance = 3.3000000000000003
+#
+# ======================================================================
+# DISTANCE MEASURES
+# ======================================================================
+# 1. Euclidean Distance
+# 2. Manhattan Distance
+# 3. Minkowski Distance
+# 4. Chebyshev Distance
+# 5. Squared Euclidean Distance
+# 6. Cosine Distance
+# 7. Calculate ALL distances
+# 8. Exit
+#
+# Enter your choice: 5
+#
+# Squared Euclidean Distance = 16.030000000000005
+#
+# ======================================================================
+# DISTANCE MEASURES
+# ======================================================================
+# 1. Euclidean Distance
+# 2. Manhattan Distance
+# 3. Minkowski Distance
+# 4. Chebyshev Distance
+# 5. Squared Euclidean Distance
+# 6. Cosine Distance
+# 7. Calculate ALL distances
+# 8. Exit
+#
+# Enter your choice: 6
+#
+# Cosine Distance = 0.07161964128508791
+#
+# ======================================================================
+# DISTANCE MEASURES
+# ======================================================================
+# 1. Euclidean Distance
+# 2. Manhattan Distance
+# 3. Minkowski Distance
+# 4. Chebyshev Distance
+# 5. Squared Euclidean Distance
+# 6. Cosine Distance
+# 7. Calculate ALL distances
+# 8. Exit
+#
+# Enter your choice: 7
+#
+# ======================================================================
+# DISTANCE RESULTS
+# ======================================================================
+# Euclidean Distance        : 4.003748243833521
+# Manhattan Distance        : 6.7
+# Chebyshev Distance        : 3.3000000000000003
+# Squared Euclidean Distance: 16.030000000000005
+# Cosine Distance            : 0.07161964128508791
+# Minkowski Distance (r=3): 3.5450237756877807
+#
+# ======================================================================
+# DISTANCE MEASURES
+# ======================================================================
+# 1. Euclidean Distance
+# 2. Manhattan Distance
+# 3. Minkowski Distance
+# 4. Chebyshev Distance
+# 5. Squared Euclidean Distance
+# 6. Cosine Distance
+# 7. Calculate ALL distances
+# 8. Exit
+#
+# Enter your choice: 8
+#
+# Program terminated.
+#            Metric  Distance
+#         Euclidean  4.003748
+#         Manhattan  6.700000
+#     Minkowski r=3  3.545024
+#         Chebyshev  3.300000
+# Squared Euclidean 16.030000
+#            Cosine  0.071620

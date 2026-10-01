@@ -68,3 +68,11 @@ residuals=Y_Test-Y_Pred
 print('Test sum of residuals:',np.sum(residuals))
 print('Test sum of squared residuals:',np.sum(residuals**2))
 plt.figure();plt.scatter(Y_Pred,residuals);plt.axhline(0,color='black',linestyle='--');plt.xlabel('Predicted salary');plt.ylabel('Residual');plt.title('Linear regression test residuals');plt.show()
+
+# --- Output ---
+# MSE:21026037.329511296 RMSE:4585.4157204675885
+# MAE: 3426.4269374307078
+# MAPE: 5.261897682192563
+# R-squared: 0.9749154407708353
+# Test sum of residuals: -14138.992754641578
+# Test sum of squared residuals: 210260373.29511297
