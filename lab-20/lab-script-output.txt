@@ -1,0 +1,4 @@
+Evaluation success rate (not supervised accuracy): 1.0
+Successful starts: 15 /15
+Mean successful path length: 3.2
+Greedy path from start: [0, 4, 5, 9, 10, 14, 15]
