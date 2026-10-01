@@ -10,6 +10,7 @@ import pandas as pd
 
 size=4;goal=15;actions=[(-1,0),(0,1),(1,0),(0,-1)]
 def transition(state,action):
+ if state==goal:return goal,0.0,True
  r,c=divmod(state,size);dr,dc=actions[action];nr,nc=np.clip(r+dr,0,size-1),np.clip(c+dc,0,size-1);next_state=int(nr*size+nc);done=next_state==goal
  return next_state,(10.0 if done else -1.0),done
 rows=[]

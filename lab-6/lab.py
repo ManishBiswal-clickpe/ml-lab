@@ -65,5 +65,6 @@ plt.ylabel('Salary')
 plt.show()
 
 residuals=Y_Test-Y_Pred
+print('Test sum of residuals:',np.sum(residuals))
 print('Test sum of squared residuals:',np.sum(residuals**2))
 plt.figure();plt.scatter(Y_Pred,residuals);plt.axhline(0,color='black',linestyle='--');plt.xlabel('Predicted salary');plt.ylabel('Residual');plt.title('Linear regression test residuals');plt.show()

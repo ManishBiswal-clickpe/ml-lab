@@ -12,14 +12,6 @@
     "exit_code": 0
   },
   {
-    "file": "lab-3/lab.py",
-    "exit_code": 0
-  },
-  {
-    "file": "lab-6/lab.py",
-    "exit_code": 0
-  },
-  {
     "file": "lab-7/lab.py",
     "exit_code": 0
   },
@@ -64,15 +56,23 @@
     "exit_code": 0
   },
   {
-    "file": "lab-20/lab.py",
-    "exit_code": 0
-  },
-  {
     "file": "lab-10/lab.py",
     "exit_code": 0
   },
   {
     "file": "lab-17/lab.py",
+    "exit_code": 0
+  },
+  {
+    "file": "lab-3/lab.py",
+    "exit_code": 0
+  },
+  {
+    "file": "lab-6/lab.py",
+    "exit_code": 0
+  },
+  {
+    "file": "lab-20/lab.py",
     "exit_code": 0
   }
 ]

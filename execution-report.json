@@ -21,24 +21,10 @@
     "error": ""
   },
   {
-    "file": "lab-3/lab.ipynb",
-    "status": "ok",
-    "figures": 1,
-    "seconds": 2.1,
-    "error": ""
-  },
-  {
     "file": "lab-4/lab.ipynb",
     "status": "ok",
     "figures": 1,
     "seconds": 2.1,
-    "error": ""
-  },
-  {
-    "file": "lab-6/lab.ipynb",
-    "status": "ok",
-    "figures": 3,
-    "seconds": 2.4,
     "error": ""
   },
   {
@@ -112,13 +98,6 @@
     "error": ""
   },
   {
-    "file": "lab-20/lab.ipynb",
-    "status": "ok",
-    "figures": 1,
-    "seconds": 1.8,
-    "error": ""
-  },
-  {
     "file": "lab-10/lab.ipynb",
     "status": "ok",
     "figures": 1,
@@ -130,6 +109,27 @@
     "status": "ok",
     "figures": 1,
     "seconds": 2.0,
+    "error": ""
+  },
+  {
+    "file": "lab-3/lab.ipynb",
+    "status": "ok",
+    "figures": 1,
+    "seconds": 2.2,
+    "error": ""
+  },
+  {
+    "file": "lab-6/lab.ipynb",
+    "status": "ok",
+    "figures": 3,
+    "seconds": 2.2,
+    "error": ""
+  },
+  {
+    "file": "lab-20/lab.ipynb",
+    "status": "ok",
+    "figures": 1,
+    "seconds": 5.0,
     "error": ""
   }
 ]

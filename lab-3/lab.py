@@ -135,7 +135,10 @@ print(X_normalized.head())
 
 print("\n--- Data Balancing ---")
 
-print(df["Species"].value_counts())
+min_count = df['Species'].value_counts().min()
+df = pd.concat([group.sample(n=min_count, random_state=42) for _,group in df.groupby('Species')], ignore_index=True)
+print('Balanced class counts:')
+print(df['Species'].value_counts())
 
 print("\nClass proportions:")
 print(df["Species"].value_counts(normalize=True))
@@ -178,4 +181,4 @@ print("Y_test :", Y_test.shape)
 
 
 df['Species'].value_counts().sort_index().plot.bar(title='Class counts after duplicate removal');plt.xlabel('Species');plt.ylabel('Count');plt.tight_layout();plt.show()
-print('Class balancing check: counts shown above; no synthetic resampling is applied.')
+print('Class balancing check: counts shown above; equal-count random undersampling is applied.')
