@@ -1,0 +1,5 @@
+Dataset shape: (1797, 64)
+Reduced shape: (1347, 2)
+Training trustworthiness (10 neighbors): 0.9755448262519093
+Original-space KNN test accuracy: 0.9644444444444444
+UMAP-space KNN test accuracy: 0.9577777777777777
