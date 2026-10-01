@@ -1,0 +1,19 @@
+Example-data test accuracy: 0.3333333333333333
+              precision    recall  f1-score   support
+
+    negative       0.25      0.17      0.20         6
+    positive       0.38      0.50      0.43         6
+
+    accuracy                           0.33        12
+   macro avg       0.31      0.33      0.31        12
+weighted avg       0.31      0.33      0.31        12
+
+                         Review                         Cleaned
+great product excellent quality great product excellent quality
+       love this useful product        love this useful product
+   amazing service very helpful    amazing service very helpful
+excellent value works perfectly excellent value works perfectly
+fast delivery wonderful quality fast delivery wonderful quality
+                             Review Prediction
+excellent quality and great service   positive
+ terrible quality and slow delivery   negative
