@@ -1,3 +1,0 @@
-Accuracy: 0.9790209790209791
-ROC AUC: 0.9968553459119497
-Positive ROC class: benign (label 1)

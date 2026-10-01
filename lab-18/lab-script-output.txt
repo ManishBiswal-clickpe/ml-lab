@@ -1,5 +1,0 @@
-Dataset shape: (1797, 64)
-95% variance PCA components: 40
-Retained variance: 0.9528126674266866
-Full-feature test accuracy: 0.9777777777777777
-PCA test accuracy: 0.96
