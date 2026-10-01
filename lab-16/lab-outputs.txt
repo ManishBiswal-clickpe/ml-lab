@@ -1,0 +1,6 @@
+            Model  CV mean accuracy   CV std  Test accuracy  Test macro F1
+    Decision tree          0.938960 0.021582       0.944056       0.939560
+          Bagging          0.960109 0.009332       0.958042       0.954670
+    Random forest          0.962462 0.017232       0.958042       0.954670
+         AdaBoost          0.967114 0.018851       0.965035       0.962067
+Gradient boosting          0.960137 0.018982       0.958042       0.954284
