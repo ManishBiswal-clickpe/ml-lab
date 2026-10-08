@@ -2,7 +2,7 @@
 
 Python programs, printed outputs, and graphs for the labs posted in Classroom.
 
-Included: labs 1, 2, 3, 5, 6, 7, 8 and 11. Syllabus-only experiments are not included.
+Included: labs 1, 2, 3, 5, 6, 7, 8, 11, 14 and 15. Syllabus-only experiments are not included.
 
 ## Run
 
@@ -10,7 +10,7 @@ Use Python 3.10 or newer. Install `requirements.txt`, then run `python lab.py` f
 
 ## Results
 
-All nine Python programs ran successfully. PNGs are in each lab's `figures/` folder; printed output is in comments at the bottom of each script.
+The original nine Python programs and the added Lab 14 and Lab 15 programs ran successfully. PNGs are in each lab's `figures/` folder; printed output is in comments at the bottom of each script.
 
 ## Data and implementation notes
 
@@ -26,3 +26,5 @@ The posted starters were adapted for execution. Adaptation notes are in each lab
 - [Lab 7: Distance metrics](lab-7/lab.py)
 - [Lab 8: Logistic regression](lab-8/lab.py)
 - [Lab 11: K-nearest neighbors classifier](lab-11/lab.py)
+- [Lab 14: PCA feature reduction](lab-14/lab.py)
+- [Lab 15: K-Means clustering](lab-15/lab.py)
